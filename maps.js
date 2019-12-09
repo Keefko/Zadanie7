@@ -175,7 +175,7 @@ var geojsonFeature = {
       "type": "Feature",
       "properties": {
       	"name" : "bus",
-      	"popupContent" : "ZOO 39 - Lafranconi , 31 - Lafranconi"
+      	"popupContent" : "<ul><li><strong>ZOO</strong></li><li> 39 - <span>Lafranconi</span></li><li> 31 - <span>Lafranconi</span></li><li> N31 - <span>Lafranconi</span></li></ul>"
       },
       "geometry": {
         "type": "Point",
@@ -189,7 +189,7 @@ var geojsonFeature = {
       "type": "Feature",
       "properties": {
       	"name" : "bus",
-      	"popupContent" : "ZOO 39 - Slávičie údolie , 31 - Slávičie údolie"
+      	"popupContent" : "<ul><li><strong>ZOO</strong></li><li> 39 - <span>Cintorín Slávičie údolie</span></li><li> 31 - <span>Cintorín Slávičie údolie</span></li><li> N31 - <span>Cintorín Slávičie údolie</span></li></ul>"
       },
       "geometry": {
         "type": "Point",
@@ -203,7 +203,7 @@ var geojsonFeature = {
       "type": "Feature",
       "properties": {
       	"name" : "bus",
-      	"popupContent" : "ZOO dont"
+      	"popupContent" : "<ul><li><strong>ZOO</strong></li><li> 32 - <span>Pri Habánskom mlyne</span></li><li> N29 - <span>Pri Habánskom mlyne</span></li><li> 30 - <span>Pri Habánskom mlyne</span></li><li> 37 - <span>Pri Habánskom mlyne</span></li><li> 92 - <span>Pri Habánskom mlyne</span></li></ul>" 
       },
       "geometry": {
         "type": "Point",
@@ -217,7 +217,7 @@ var geojsonFeature = {
       "type": "Feature",
       "properties": {
       	"name" : "bus",
-      	"popupContent" : "ZOO 32 - Kramáre"
+      	"popupContent" : "<ul><li><strong>ZOO</strong></li><li> 32 - <span>Botanická Záhrada</span></li><li> N29 - <span>Botanická Záhrada</span></li><li> 30 - <span>Lafranconi</span></li><li> 37 - <span>Lafranconi</span></li><li> 92 - <span>Einsteinová</span></li></ul>"
       },
       "geometry": {
         "type": "Point",
@@ -231,7 +231,7 @@ var geojsonFeature = {
       "type": "Feature",
       "properties": {
       	"name" : "train",
-      	"popupContent" : "Botanická"
+      	"popupContent" : "<ul><li><strong>Botanická Záhrada</strong></li><li> X6 - <span>Lafranconi</span></li></ul>"
       },
       "geometry": {
         "type": "Point",
@@ -245,7 +245,7 @@ var geojsonFeature = {
       "type": "Feature",
       "properties": {
       	"name" : "train",
-      	"popupContent" : "Botanická"
+      	"popupContent" : "<ul><li><strong>Botanická Záhrada</strong></li><li> X6 - <span>Botanická Záhrada</span></li></ul>"
       },
       "geometry": {
         "type": "Point",
@@ -259,7 +259,7 @@ var geojsonFeature = {
       "type": "Feature",
       "properties": {
       	"name" : "bus",
-      	"popupContent" : "Botanická dont"
+      	"popupContent" : "<ul><li><strong>Botanická Záhrada</strong></li><li> 32 - <span>ZOO</span></li><li> 29 - <span>Lafranconi</span></li><li> N29 - <span>ZOO</span></li><li> N33 - <span>Lafranconi</span></li><li> N34 - <span>Lafranconi</span></li></ul>"
       },
       "geometry": {
         "type": "Point",
@@ -273,7 +273,7 @@ var geojsonFeature = {
       "type": "Feature",
       "properties": {
       	"name" : "bus",
-      	"popupContent" : "Botanická dont"
+      	"popupContent" : "<ul><li><strong>Botanická Záhrada</strong></li><li> 32 - <span>Molecová</span></li><li> 29 - <span>Vodárenské múzeum</span></li><li> N29 - <span>Vodárenské múzeum</span></li><li> N33 - <span>Molecová</span></li><li> N34 - <span>Molecová</span></li></ul>"
       },
       "geometry": {
         "type": "Point",
