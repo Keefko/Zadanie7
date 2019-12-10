@@ -49,8 +49,27 @@ ul li {
 
 ul li:nth-child(1){
 	padding-bottom: 10px;
+	font-size: 16px;
 }
 
 ul li span {
 	color: #858585;
+}
+
+.leaflet-routing-geocoders{
+	border: 0 !important;
+}
+
+.leaflet-routing-geocoders div:nth-child(2) input ,
+.leaflet-routing-geocoders button,
+.leaflet-routing-remove-waypoint{
+	display: none !important; 
+}
+
+.leaflet-touch .leaflet-bar{
+	border: 0 !important;
+}
+
+.leaflet-bar{
+	box-shadow: none !important;
 }

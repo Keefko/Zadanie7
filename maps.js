@@ -351,12 +351,17 @@ window.onload = function(){
 	}).addTo(mymap);
 
 
+
 	var control = L.Routing.control({
 	        router: L.routing.mapbox('pk.eyJ1IjoiMTdkYW55OSIsImEiOiJjazN5YW50ZXgweTluM2RwN2p1ZnpsbjFpIn0.8DTWYaOEHucqOgfoojSsKQ'),
 	     	 waypoints: [
 		        L.latLng(),
 		        L.latLng(48.1518532, 17.073645)
 		    ],
+
+		    lineOptions: {
+      			styles: [{color: 'blue', opacity: 1, weight: 3}]
+  			},
 	        routeWhileDragging: true,
 	        geocoder: L.Control.Geocoder.nominatim()
 	    })
@@ -373,4 +378,41 @@ window.onload = function(){
 
 	L.Routing.errorControl(control).addTo(mymap);
 
+	var popup = L.popup();
+	function onMapClick(e){
+		var html = '';
+
+		popup
+        .setLatLng(e.latlng)
+        .openOn(mymap);
+
+		$(document).ready(function(){
+			  $.ajax({
+			    url: "https://api.openweathermap.org/data/2.5/weather?lat=" + e.latlng.lat + '&lon=' + e.latlng.lng + "&appid=595e3d169452dbc1039272105c6efdf6",
+			    dataType: 'json',
+			    success: function(data) {
+			    	console.log(data);
+			    	weatherstationname = data.name;
+			    	temperature = data.main.temp; // Kelvin
+      				airpressure = data.main.pressure; // hPa
+      				airhumidity = data.main.humidity;
+      				windspeed = data.wind.speed;
+      				cloudcoverage = data.clouds.all;
+      				weatherconditionicon = data.weather[0].icon;
+      				var temperaturecelsius = Math.round((temperature - 273) * 100 / 100);
+      				var weathercondtioniconhtml = "http://openweathermap.org/img/w/" + weatherconditionicon + ".png";
+      				var windspeedkmh = Math.round((windspeed * 3.6) * 100) / 100; 
+      				html +='<ul><li><strong>' + weatherstationname + '</strong></li><li><img src='+ weathercondtioniconhtml +'></li>';
+      				html +='<li>Teplota: <span>'+ temperaturecelsius +'°C' + '</span></li><li> Tlak: <span>'+ airpressure + 'hPa' + '</span></li>';
+      				html +='<li> Vlhkosť: <span>'+ airhumidity +'%' + '</span></li><li> Rýchlosť vetru: <span>'+ windspeedkmh +'km/h' + '</li>';
+      				html +='<li>Oblačnosť: <span>' + cloudcoverage + '%' + '</span></li></ul>';
+			    	popup.setContent(html);
+			   	}
+			  });
+		});
+
+	}
+
+
+	mymap.on('click', onMapClick);
 }
